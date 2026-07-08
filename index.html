@@ -40,11 +40,11 @@
   .mono{ font-family:'IBM Plex Mono', monospace; }
   a{color:inherit;}
   ::selection{ background:var(--ecg); color:var(--ink); }
- 
+
   /* ---------- Layout shells ---------- */
   .wrap{ max-width:1180px; margin:0 auto; padding:0 28px; }
   @media (max-width:720px){ .wrap{ padding:0 18px; } }
- 
+
   /* ---------- Hero ---------- */
   .hero{
     background:var(--ink);
@@ -81,21 +81,21 @@
     font-family:'IBM Plex Mono', monospace; font-size:12px; color:#7D9089;
   }
   .hero-foot span b{ color:#CFE3DB; font-weight:500; }
- 
+
   /* ---------- Disclaimer ---------- */
   .disclaimer{
     background:#FBF1D9; border-top:1px solid #E9D8A6; border-bottom:1px solid #E9D8A6;
     color:#5C4A17; font-size:13.5px; padding:11px 0;
   }
   .disclaimer .wrap{ display:flex; gap:10px; align-items:flex-start; }
- 
+
   /* ---------- Main grid ---------- */
   .main{ padding:44px 0 90px 0; }
   .grid{
     display:grid; grid-template-columns:1.35fr 1fr; gap:26px; align-items:start;
   }
   @media (max-width:920px){ .grid{ grid-template-columns:1fr; } }
- 
+
   .card{
     background:#fff; border:1px solid var(--line); border-radius:var(--radius);
     padding:26px 26px 22px 26px;
@@ -106,7 +106,7 @@
   }
   .section-title{ font-size:20px; font-weight:600; margin:0 0 4px 0; }
   .section-sub{ font-size:13.5px; color:var(--muted); margin:0 0 22px 0; }
- 
+
   /* Tabs */
   .tabs{ display:flex; gap:6px; margin-bottom:26px; flex-wrap:wrap; }
   .tab{
@@ -116,18 +116,18 @@
   }
   .tab.active{ background:var(--ink); color:var(--ecg); border-color:var(--ink); }
   .tab .n{ opacity:.6; margin-right:5px; }
- 
+
   .stepgroup{ display:none; }
   .stepgroup.active{ display:block; animation:fadein .25s ease; }
   @keyframes fadein{ from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
- 
+
   .field{ margin-bottom:20px; }
   .field label{ display:block; font-size:13.5px; font-weight:500; margin-bottom:8px; color:#22333E; }
   .field .hint{ font-size:12px; color:var(--muted-2); margin-top:6px; }
- 
+
   .row2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
   @media (max-width:520px){ .row2{ grid-template-columns:1fr; } }
- 
+
   input[type=number], select, textarea{
     width:100%; font-family:'IBM Plex Sans',sans-serif; font-size:14.5px;
     padding:11px 12px; border-radius:9px; border:1px solid var(--line);
@@ -135,19 +135,19 @@
   }
   input[type=number]:focus, select:focus, textarea:focus{ border-color:var(--ecg-dim); }
   textarea{ resize:vertical; min-height:88px; }
- 
+
   input[type=range]{
     width:100%; accent-color:var(--ecg-dim); height:4px;
   }
   .rangeval{ font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--ecg-dim); font-weight:600; }
- 
+
   .toggle-row{ display:flex; gap:8px; flex-wrap:wrap; }
   .toggle{
     padding:9px 15px; border-radius:8px; border:1px solid var(--line); background:var(--paper);
     font-size:13.5px; cursor:pointer; color:var(--muted); user-select:none; transition:all .15s;
   }
   .toggle.on{ background:#0E1A24; color:var(--ecg); border-color:#0E1A24; }
- 
+
   .navbtns{ display:flex; justify-content:space-between; margin-top:28px; gap:10px; }
   button{ font-family:'IBM Plex Sans', sans-serif; cursor:pointer; }
   .btn{
@@ -161,7 +161,7 @@
   .btn.primary:hover{ background:#182B25; }
   .btn:disabled{ opacity:.4; cursor:not-allowed; }
   .btn.full{ width:100%; }
- 
+
   /* ---------- Right column: gauge ---------- */
   .gauge-card{ position:sticky; top:20px; }
   .gauge-wrap{ display:flex; flex-direction:column; align-items:center; padding:8px 0 4px 0; }
@@ -172,14 +172,14 @@
   .completeness .bar{ height:6px; border-radius:4px; background:var(--paper-2); overflow:hidden; }
   .completeness .fill{ height:100%; background:var(--ecg); transition:width .3s ease; }
   .completeness .lbl{ font-size:12px; color:var(--muted); margin-top:7px; display:flex; justify-content:space-between; }
- 
+
   .factor-list{ margin-top:22px; display:none; }
   .factor-list.show{ display:block; }
   .factor{ margin-bottom:12px; }
   .factor .flabel{ display:flex; justify-content:space-between; font-size:13px; margin-bottom:5px; }
   .factor .ftrack{ height:6px; border-radius:4px; background:var(--paper-2); overflow:hidden; }
   .factor .ffill{ height:100%; border-radius:4px; }
- 
+
   /* ---------- Results ---------- */
   .results{ margin-top:28px; display:none; }
   .results.show{ display:block; animation:fadein .3s ease; }
@@ -191,7 +191,7 @@
   .result-hero .meta{ flex:1; min-width:220px; }
   .result-hero .meta h3{ margin:0 0 6px 0; font-size:19px; }
   .result-hero .meta p{ margin:0; color:#B9C9C2; font-size:13.5px; }
- 
+
   /* ---------- Chat / assistant ---------- */
   .assistant{ margin-top:26px; }
   .assistant .card{ padding:0; overflow:hidden; }
@@ -205,31 +205,60 @@
   @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
   .assistant-head h3{ margin:0; font-size:16px; font-weight:600; }
   .assistant-head span{ font-size:12.5px; color:#9FB4AC; }
- 
+
   .chat-log{ padding:22px 24px; max-height:420px; overflow-y:auto; display:flex; flex-direction:column; gap:14px; }
   .msg{ max-width:86%; padding:12px 15px; border-radius:12px; font-size:14px; white-space:pre-wrap; line-height:1.55; }
   .msg.user{ align-self:flex-end; background:var(--ink); color:#EAF3EF; border-bottom-right-radius:3px; }
   .msg.bot{ align-self:flex-start; background:var(--paper); border:1px solid var(--line); border-bottom-left-radius:3px; }
   .msg.bot.urgent{ border-color:var(--alert); background:#FFF1F0; }
   .msg.system-note{ align-self:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--muted-2); background:none; }
- 
+
   .chat-input{ display:flex; gap:10px; padding:16px 20px; border-top:1px solid var(--line); }
   .chat-input textarea{ flex:1; min-height:44px; max-height:120px; }
   .chat-input button{
     padding:0 20px; border-radius:9px; border:none; background:var(--ecg-dim); color:#fff; font-weight:600; font-size:14px;
   }
   .chat-input button:disabled{ opacity:.4; }
- 
+
   .typing{ display:flex; gap:4px; align-items:center; padding:4px 0; }
   .typing span{ width:6px; height:6px; border-radius:50%; background:var(--muted-2); animation:blink 1.2s infinite; }
   .typing span:nth-child(2){ animation-delay:.2s; } .typing span:nth-child(3){ animation-delay:.4s; }
   @keyframes blink{ 0%,80%,100%{opacity:.25;} 40%{opacity:1;} }
- 
+
   footer{ padding:30px 0 50px 0; text-align:center; font-size:12.5px; color:var(--muted-2); }
+
+  /* ---------- Doctor summary ---------- */
+  .doctor-summary-outer{ margin-top:26px; }
+  .summary-toolbar{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:22px; }
+  .summary-actions{ display:flex; gap:10px; flex-shrink:0; }
+  .doctor-summary{ border:1px solid var(--line); border-radius:10px; padding:26px 28px; }
+  .ds-head{ display:flex; justify-content:space-between; align-items:flex-start; border-bottom:2px solid var(--ink); padding-bottom:16px; margin-bottom:20px; }
+  .ds-brand{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; }
+  .ds-brand span{ font-weight:400; color:var(--muted); font-size:14px; }
+  .ds-date{ font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted-2); margin-top:4px; }
+  .ds-score{ text-align:right; }
+  .ds-score-num{ font-size:32px; font-weight:600; }
+  .ds-score-tier{ font-size:11.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-top:2px; }
+  .ds-section{ margin-bottom:22px; }
+  .ds-section h4{ font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted-2); margin:0 0 10px 0; }
+  .ds-section p{ margin:0; font-size:14px; }
+  .ds-table{ width:100%; border-collapse:collapse; font-size:13.5px; }
+  .ds-table td{ padding:7px 4px; border-bottom:1px solid var(--paper-2); }
+  .ds-table td:first-child{ color:var(--muted); width:60%; }
+  .ds-table td:last-child{ text-align:right; font-family:'IBM Plex Mono',monospace; font-weight:500; }
+  .ds-table.two-col{ }
+  .ds-foot{ font-size:11.5px; color:var(--muted-2); border-top:1px solid var(--paper-2); padding-top:14px; margin-top:4px; }
+
+  @media print{
+    body *{ visibility:hidden; }
+    .doctor-summary, .doctor-summary *{ visibility:visible; }
+    .doctor-summary{ position:absolute; top:0; left:0; width:100%; border:none; padding:0; }
+    .no-print{ display:none !important; }
+  }
 </style>
 </head>
 <body>
- 
+
 <div class="hero">
   <div class="wrap">
     <div class="hero-top">
@@ -245,31 +274,31 @@
     <span id="traceBpm">— BPM (SIMULATED)</span>
   </div>
 </div>
- 
+
 <div class="disclaimer">
   <div class="wrap">
     <span>⚠</span>
     <div><b>Not a diagnosis.</b> CORDIS estimates statistical risk from population health data — it does not replace a doctor. If you have chest pain, severe shortness of breath, or think you're having a medical emergency, call your local emergency number now.</div>
   </div>
 </div>
- 
+
 <div class="main">
   <div class="wrap">
     <div class="grid">
- 
+
       <!-- LEFT: FORM -->
       <div class="card">
         <span class="panel-label">Step 1</span>
         <h2 class="section-title">Health intake</h2>
         <p class="section-sub">Answer honestly — every field feeds directly into your risk calculation.</p>
- 
+
         <div class="tabs" id="tabs">
           <div class="tab active" data-step="0"><span class="n">01</span>Vitals & body</div>
           <div class="tab" data-step="1"><span class="n">02</span>Lifestyle</div>
           <div class="tab" data-step="2"><span class="n">03</span>Medical history</div>
           <div class="tab" data-step="3"><span class="n">04</span>Symptoms</div>
         </div>
- 
+
         <!-- STEP 0 -->
         <div class="stepgroup active" data-step="0">
           <div class="row2">
@@ -299,7 +328,7 @@
               </div>
             </div>
           </div>
- 
+
           <div class="row2">
             <div class="field">
               <label>Height (cm)</label>
@@ -314,18 +343,18 @@
             <label>Body Mass Index (auto-calculated)</label>
             <input type="number" id="bmi" value="26.0" step="0.1" readonly style="color:var(--muted);">
           </div>
- 
+
           <div class="field">
             <label>How would you rate your general health? <span class="rangeval" id="genhealthVal">Good</span></label>
             <input type="range" id="genhealth" min="1" max="5" value="3">
           </div>
- 
+
           <div class="field">
             <label>Average sleep per night: <span class="rangeval" id="sleepVal">7 hrs</span></label>
             <input type="range" id="sleep" min="2" max="12" value="7">
           </div>
         </div>
- 
+
         <!-- STEP 1 -->
         <div class="stepgroup" data-step="1">
           <div class="field">
@@ -358,7 +387,7 @@
             </div>
           </div>
         </div>
- 
+
         <!-- STEP 2 -->
         <div class="stepgroup" data-step="2">
           <div class="field">
@@ -390,7 +419,7 @@
             <div class="toggle-row" id="skinRow"><div class="toggle on" data-val="0">No</div><div class="toggle" data-val="1">Yes</div></div>
           </div>
         </div>
- 
+
         <!-- STEP 3 -->
         <div class="stepgroup" data-step="3">
           <div class="field">
@@ -399,13 +428,13 @@
             <p class="hint">This won't change your statistical score — it's passed to the assistant below so it can give you tailored, relevant guidance.</p>
           </div>
         </div>
- 
+
         <div class="navbtns">
           <button class="btn ghost" id="prevBtn" disabled>← Back</button>
           <button class="btn primary" id="nextBtn">Continue →</button>
         </div>
       </div>
- 
+
       <!-- RIGHT: GAUGE -->
       <div class="card gauge-card">
         <span class="panel-label">Live estimate</span>
@@ -422,20 +451,20 @@
             <div class="tier mono" id="riskTier" style="color:var(--muted-2);">AWAITING INPUT</div>
           </div>
         </div>
- 
+
         <div class="completeness">
           <div class="bar"><div class="fill" id="completeFill" style="width:0%;"></div></div>
           <div class="lbl"><span id="completeLbl">0% complete</span><span>Run when ready</span></div>
         </div>
- 
+
         <button class="btn primary full" id="runBtn" style="margin-top:18px;">Run assessment</button>
- 
+
         <div class="factor-list" id="factorList">
           <span class="panel-label" style="margin-top:4px;">Top contributing factors</span>
         </div>
       </div>
     </div>
- 
+
     <!-- RESULTS -->
     <div class="results" id="results">
       <div class="result-hero">
@@ -446,7 +475,56 @@
         </div>
       </div>
     </div>
- 
+
+    <!-- DOCTOR SUMMARY -->
+    <div class="doctor-summary-outer no-print-hide" id="summarySection" style="display:none;">
+      <div class="card summary-card">
+        <div class="summary-toolbar no-print">
+          <div>
+            <span class="panel-label">For your appointment</span>
+            <h2 class="section-title" style="margin-bottom:2px;">Bring-to-your-doctor summary</h2>
+            <p class="section-sub" style="margin-bottom:0;">A clean, organized printout of everything above — hand it to your doctor or bring it to your appointment.</p>
+          </div>
+          <div class="summary-actions">
+            <button class="btn" id="copySummaryBtn">Copy text</button>
+            <button class="btn primary" id="printSummaryBtn">Print / Save as PDF</button>
+          </div>
+        </div>
+
+        <div id="doctorSummary" class="doctor-summary">
+          <div class="ds-head">
+            <div>
+              <div class="ds-brand">CORDIS <span>— Cardiac Risk Summary</span></div>
+              <div class="ds-date" id="dsDate">—</div>
+            </div>
+            <div class="ds-score">
+              <div class="ds-score-num mono" id="dsScoreNum">—%</div>
+              <div class="ds-score-tier mono" id="dsScoreTier">—</div>
+            </div>
+          </div>
+
+          <div class="ds-section">
+            <h4>Reported symptoms</h4>
+            <p id="dsSymptoms">None reported.</p>
+          </div>
+
+          <div class="ds-section">
+            <h4>Top contributing factors (model-derived)</h4>
+            <table class="ds-table" id="dsFactorsTable"><tbody></tbody></table>
+          </div>
+
+          <div class="ds-section">
+            <h4>Full intake record</h4>
+            <table class="ds-table two-col" id="dsIntakeTable"><tbody></tbody></table>
+          </div>
+
+          <div class="ds-foot">
+            Generated by CORDIS, a statistical screening tool (AUC 0.84, trained on the CDC BRFSS 2020 cohort). This is not a diagnosis and does not replace clinical judgment — for use as a discussion starting point with a licensed physician.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- ASSISTANT -->
     <div class="assistant" id="assistantSection" style="display:none;">
       <div class="card">
@@ -464,12 +542,12 @@
         </div>
       </div>
     </div>
- 
+
   </div>
 </div>
- 
+
 <footer>CORDIS is an educational screening tool, not a medical device. Model trained on the CDC BRFSS 2020 heart disease dataset. Always consult a licensed physician for diagnosis and treatment.</footer>
- 
+
 <script>
 /* ================= MODEL ================= */
 const MODEL = {
@@ -485,9 +563,9 @@ const FEATURE_LABELS = {
   Smoking:"Smoking", AlcoholDrinking:"Heavy alcohol use", Stroke:"History of stroke", DiffWalking:"Difficulty walking",
   Sex:"Sex (male)", PhysicalActivity:"Physical activity", Asthma:"Asthma", KidneyDisease:"Kidney disease", SkinCancer:"Skin cancer history"
 };
- 
+
 function sigmoid(z){ return 1/(1+Math.exp(-z)); }
- 
+
 function computeRisk(x){
   // x is object keyed by feature name
   let z = MODEL.intercept;
@@ -502,11 +580,11 @@ function computeRisk(x){
   contributions.sort((a,b)=>b.contrib-a.contrib);
   return {prob, contributions};
 }
- 
+
 /* ================= FORM STATE ================= */
 const steps = [0,1,2,3];
 let currentStep = 0;
- 
+
 function setupToggleRow(id){
   const row = document.getElementById(id);
   row.querySelectorAll('.toggle').forEach(t=>{
@@ -518,11 +596,11 @@ function setupToggleRow(id){
   });
 }
 ['sexRow','smokeRow','alcRow','activityRow','strokeRow','walkRow','asthmaRow','kidneyRow','skinRow'].forEach(setupToggleRow);
- 
+
 function toggleVal(id){
   return parseInt(document.getElementById(id).querySelector('.toggle.on').dataset.val);
 }
- 
+
 function updateBmi(){
   const h = parseFloat(document.getElementById('height').value)/100;
   const w = parseFloat(document.getElementById('weight').value);
@@ -531,7 +609,7 @@ function updateBmi(){
 document.getElementById('height').addEventListener('input', ()=>{updateBmi(); updateLive();});
 document.getElementById('weight').addEventListener('input', ()=>{updateBmi(); updateLive();});
 updateBmi();
- 
+
 const genhealthLabels = {1:'Poor',2:'Fair',3:'Good',4:'Very good',5:'Excellent'};
 document.getElementById('genhealth').addEventListener('input', e=>{
   document.getElementById('genhealthVal').textContent = genhealthLabels[e.target.value];
@@ -551,7 +629,7 @@ document.getElementById('mentalh').addEventListener('input', e=>{
 });
 document.getElementById('age').addEventListener('change', updateLive);
 document.getElementById('diabetic').addEventListener('change', updateLive);
- 
+
 function getFeatures(){
   return {
     AgeNum: parseFloat(document.getElementById('age').value),
@@ -572,7 +650,7 @@ function getFeatures(){
     SkinCancer: toggleVal('skinRow')
   };
 }
- 
+
 /* ================= TABS / NAV ================= */
 document.querySelectorAll('.tab').forEach(tab=>{
   tab.addEventListener('click', ()=> goToStep(parseInt(tab.dataset.step)));
@@ -591,27 +669,27 @@ function goToStep(step){
   document.getElementById('nextBtn').textContent = step===steps.length-1 ? 'Review →' : 'Continue →';
   updateLive();
 }
- 
+
 /* ================= LIVE GAUGE ================= */
 let lastRisk = null;
 function updateLive(){
   const completion = Math.min(100, Math.round(((currentStep+1)/steps.length)*100));
   document.getElementById('completeFill').style.width = completion+'%';
   document.getElementById('completeLbl').textContent = completion+'% complete';
- 
+
   const feats = getFeatures();
   const {prob} = computeRisk(feats);
   lastRisk = prob;
   const pct = Math.round(prob*100);
   document.getElementById('riskNum').textContent = pct+'%';
- 
+
   let tier, color;
   if(prob < 0.35){ tier='LOW RISK'; color='var(--ecg-dim)'; }
   else if(prob < 0.6){ tier='MODERATE RISK'; color='var(--amber)'; }
   else { tier='ELEVATED RISK'; color='var(--alert)'; }
   const tierEl = document.getElementById('riskTier');
   tierEl.textContent = tier; tierEl.style.color = color;
- 
+
   // gauge arc: dasharray 298 total, offset from 298 (empty) to 0 (full)
   const arcLen = 298;
   document.getElementById('gaugeArc').style.stroke = color;
@@ -619,18 +697,18 @@ function updateLive(){
   // needle: -90deg (left) to +90deg (right) over 0..1
   const angle = -90 + (prob*180);
   document.getElementById('needle').setAttribute('transform', `rotate(${angle} 110 115)`);
- 
+
   setEcgIntensity(prob);
 }
- 
+
 /* ================= FACTOR BREAKDOWN + RESULTS ================= */
 document.getElementById('runBtn').addEventListener('click', runAssessment);
- 
+
 function runAssessment(){
   const feats = getFeatures();
   const {prob, contributions} = computeRisk(feats);
   const pct = Math.round(prob*100);
- 
+
   let tier, desc, color;
   if(prob < 0.35){
     tier='Low estimated risk'; color='var(--ecg)';
@@ -642,13 +720,13 @@ function runAssessment(){
     tier='Elevated estimated risk'; color='var(--alert)';
     desc="Several factors combine to place you in a higher risk range for this model. We'd recommend booking time with a physician or cardiologist to discuss a full evaluation.";
   }
- 
+
   document.getElementById('resultPct').textContent = pct+'%';
   document.getElementById('resultPct').style.color = color;
   document.getElementById('resultTitle').textContent = tier;
   document.getElementById('resultDesc').textContent = desc;
   document.getElementById('results').classList.add('show');
- 
+
   // factor list
   const topFactors = contributions.slice(0,5);
   const maxAbs = Math.max(...contributions.map(c=>Math.abs(c.contrib)), 0.001);
@@ -664,14 +742,112 @@ function runAssessment(){
     flist.appendChild(div);
   });
   flist.classList.add('show');
- 
+
+  buildDoctorSummary(feats, pct, tier, contributions);
+  document.getElementById('summarySection').style.display = 'block';
+
   document.getElementById('assistantSection').style.display = 'block';
   if(chatHistory.length===0){
     seedAssistant(prob, tier);
   }
   document.getElementById('assistantSection').scrollIntoView({behavior:'smooth', block:'start'});
 }
- 
+
+/* ================= DOCTOR SUMMARY ================= */
+const genhealthWords = {1:'Poor',2:'Fair',3:'Good',4:'Very good',5:'Excellent'};
+const diabeticWords = {0:'No', 1:'Borderline / prediabetes', 2:'Yes'};
+function yn(v){ return v===1 ? 'Yes' : 'No'; }
+
+function buildDoctorSummary(feats, pct, tier, contributions){
+  const now = new Date();
+  document.getElementById('dsDate').textContent = 'Generated ' + now.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'}) + ' at ' + now.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});
+  document.getElementById('dsScoreNum').textContent = pct + '%';
+  document.getElementById('dsScoreTier').textContent = tier;
+
+  const symptomText = document.getElementById('symptoms').value.trim();
+  document.getElementById('dsSymptoms').textContent = symptomText || 'None reported.';
+
+  const topFactors = contributions.slice(0,5);
+  const factorsBody = document.getElementById('dsFactorsTable').querySelector('tbody');
+  factorsBody.innerHTML = '';
+  topFactors.forEach(f=>{
+    const tr = document.createElement('tr');
+    const direction = f.contrib > 0 ? 'Increases risk' : 'Lowers risk';
+    tr.innerHTML = `<td>${FEATURE_LABELS[f.name]}</td><td>${direction}</td>`;
+    factorsBody.appendChild(tr);
+  });
+
+  const rows = [
+    ['Age range', document.getElementById('age').selectedOptions[0].textContent],
+    ['Sex', feats.Sex ? 'Male' : 'Female'],
+    ['Height / Weight', document.getElementById('height').value + ' cm / ' + document.getElementById('weight').value + ' kg'],
+    ['BMI', feats.BMI.toFixed(1)],
+    ['Self-rated general health', genhealthWords[feats.GenHealthNum]],
+    ['Average sleep', feats.SleepTime + ' hrs/night'],
+    ['Poor physical health days (30d)', feats.PhysicalHealth],
+    ['Poor mental health days (30d)', feats.MentalHealth],
+    ['Smoker', yn(feats.Smoking)],
+    ['Heavy alcohol use', yn(feats.AlcoholDrinking)],
+    ['Regular physical activity', yn(feats.PhysicalActivity)],
+    ['Diabetes status', diabeticWords[feats.DiabeticNum]],
+    ['History of stroke', yn(feats.Stroke)],
+    ['Difficulty walking / climbing stairs', yn(feats.DiffWalking)],
+    ['Asthma', yn(feats.Asthma)],
+    ['Kidney disease', yn(feats.KidneyDisease)],
+    ['Skin cancer history', yn(feats.SkinCancer)],
+  ];
+  const intakeBody = document.getElementById('dsIntakeTable').querySelector('tbody');
+  intakeBody.innerHTML = '';
+  rows.forEach(([label,val])=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${label}</td><td>${val}</td>`;
+    intakeBody.appendChild(tr);
+  });
+}
+
+function summaryAsText(){
+  const pct = document.getElementById('dsScoreNum').textContent;
+  const tier = document.getElementById('dsScoreTier').textContent;
+  const date = document.getElementById('dsDate').textContent;
+  const symptoms = document.getElementById('dsSymptoms').textContent;
+  let lines = [];
+  lines.push('CORDIS — Cardiac Risk Summary');
+  lines.push(date);
+  lines.push('');
+  lines.push(`Estimated risk: ${pct} (${tier})`);
+  lines.push('');
+  lines.push('Reported symptoms:');
+  lines.push(symptoms);
+  lines.push('');
+  lines.push('Top contributing factors:');
+  document.querySelectorAll('#dsFactorsTable tbody tr').forEach(tr=>{
+    const tds = tr.querySelectorAll('td');
+    lines.push(`- ${tds[0].textContent}: ${tds[1].textContent}`);
+  });
+  lines.push('');
+  lines.push('Full intake record:');
+  document.querySelectorAll('#dsIntakeTable tbody tr').forEach(tr=>{
+    const tds = tr.querySelectorAll('td');
+    lines.push(`- ${tds[0].textContent}: ${tds[1].textContent}`);
+  });
+  lines.push('');
+  lines.push('Generated by CORDIS, a statistical screening tool (AUC 0.84, trained on the CDC BRFSS 2020 cohort). Not a diagnosis — for discussion with a licensed physician.');
+  return lines.join('\n');
+}
+
+document.getElementById('printSummaryBtn').addEventListener('click', ()=> window.print());
+document.getElementById('copySummaryBtn').addEventListener('click', async ()=>{
+  const btn = document.getElementById('copySummaryBtn');
+  try{
+    await navigator.clipboard.writeText(summaryAsText());
+    const original = btn.textContent;
+    btn.textContent = 'Copied ✓';
+    setTimeout(()=> btn.textContent = original, 1800);
+  }catch(err){
+    alert('Could not copy automatically — please select and copy the summary text manually.');
+  }
+});
+
 /* ================= ECG CANVAS ================= */
 const canvas = document.getElementById('ecgCanvas');
 const ctx = canvas.getContext('2d');
@@ -682,14 +858,14 @@ function resizeCanvas(){
 }
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
- 
+
 function setEcgIntensity(prob){
   ecgIntensity = prob;
   const bpm = Math.round(58 + prob*70);
   document.getElementById('traceBpm').textContent = bpm+' BPM (SIMULATED)';
   document.getElementById('traceState').textContent = prob<0.35 ? 'RESTING' : (prob<0.6 ? 'ELEVATED' : 'IRREGULAR');
 }
- 
+
 let t = 0;
 function ecgWave(x, speedMul){
   // generates a heartbeat-like waveform value at position x (0..1 within a beat cycle)
@@ -704,7 +880,7 @@ function ecgWave(x, speedMul){
   else y = 0;
   return y;
 }
- 
+
 function drawEcg(){
   const w = canvas.width, h = canvas.height;
   ctx.clearRect(0,0,w,h);
@@ -729,13 +905,13 @@ function drawEcg(){
 }
 requestAnimationFrame(drawEcg);
 setEcgIntensity(0.15);
- 
+
 /* ================= AI ASSISTANT ================= */
 let chatHistory = []; // {role, content}
 const chatLog = document.getElementById('chatLog');
 const sendBtn = document.getElementById('sendBtn');
 const chatInput = document.getElementById('chatInput');
- 
+
 function appendMsg(role, text, urgent){
   const div = document.createElement('div');
   div.className = 'msg ' + (role==='user' ? 'user' : 'bot') + (urgent ? ' urgent' : '');
@@ -752,9 +928,9 @@ function appendTyping(){
   chatLog.scrollTop = chatLog.scrollHeight;
   return div;
 }
- 
+
 const SYSTEM_PROMPT = `You are the symptom-assistant panel inside CORDIS, a heart-disease risk screening tool. A statistical model (not you) has already estimated the user's cardiovascular risk tier from their health data; you'll be told that tier and score in context.
- 
+
 Your job when the user writes to you:
 1. Respond to what they actually said, in a calm, clear, plain-language way.
 2. If they describe symptoms, you may name general categories of concern the pattern is sometimes associated with (e.g. "patterns like this are sometimes linked to angina or arrhythmia") — never state a definitive diagnosis.
@@ -764,13 +940,13 @@ Your job when the user writes to you:
 6. Always close with encouragement to see a licensed physician or cardiologist for real diagnosis and treatment.
 7. Keep responses to roughly 120-220 words unless it's an emergency, in which case be short and direct first, then brief follow-up.
 8. Never claim to be a doctor. You are an educational assistant only.`;
- 
+
 function detectEmergency(text){
   const flags = ['crushing chest','severe chest pain','cannot breathe','cant breathe','difficulty breathing severe','fainted','faint','blue lips','slurred speech','sudden weakness','radiating to my arm','radiating to my jaw','profuse sweating'];
   const lower = text.toLowerCase();
   return flags.some(f=>lower.includes(f));
 }
- 
+
 async function callAssistant(userText, contextNote){
   const messages = [...chatHistory];
   if(contextNote){
@@ -778,7 +954,7 @@ async function callAssistant(userText, contextNote){
   } else {
     messages.push({role:'user', content: userText});
   }
- 
+
   const typingEl = appendTyping();
   try{
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -804,23 +980,23 @@ async function callAssistant(userText, contextNote){
     console.error(err);
   }
 }
- 
+
 function seedAssistant(prob, tier){
   const pct = Math.round(prob*100);
   const note = document.createElement('div');
   note.className = 'msg system-note';
   note.textContent = `Assessment loaded — ${pct}% estimated risk (${tier})`;
   chatLog.appendChild(note);
- 
+
   const symptomText = document.getElementById('symptoms').value.trim();
   const opening = symptomText
     ? `My risk assessment came back at ${pct}% (${tier}). Here's what I've been experiencing: ${symptomText}`
     : `My risk assessment came back at ${pct}% (${tier}). Can you help me understand what this means and what I should do next?`;
- 
+
   appendMsg('user', opening);
   callAssistant(opening, `Context: user's CORDIS statistical risk score is ${pct}% (${tier}).`);
 }
- 
+
 sendBtn.addEventListener('click', sendChat);
 chatInput.addEventListener('keydown', e=>{
   if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); sendChat(); }
@@ -834,10 +1010,9 @@ function sendChat(){
   const contextNote = pct!==null ? `Context: user's CORDIS statistical risk score is ${pct}%.` : null;
   callAssistant(text, contextNote);
 }
- 
+
 /* init */
 updateLive();
 </script>
 </body>
 </html>
- 
